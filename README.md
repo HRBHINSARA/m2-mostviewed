@@ -97,7 +97,7 @@ The product information includes:
 
 Here’s how the most viewed product section will appear in the frontend:
 
-![Most Viewed Products](demo/pdp_mostviewed.jpg)
+![Most Viewed Products](demo/pdp_mostviewed.png)
 
 ## Troubleshooting
 
