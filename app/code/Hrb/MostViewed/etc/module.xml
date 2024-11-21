@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!--
+/**
+* Harsh Bhinsara.
+*
+* NOTICE OF LICENSE
+*
+* This source file is subject to the MIT License
+* that is bundled with this package in the file LICENSE.md.
+*
+* @package   Hrb_MostViewed
+* @author    Harsh Bhinsara
+*/
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
+    <module name="Hrb_MostViewed"></module>
+</config>

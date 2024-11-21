@@ -1,4 +1,3 @@
-
 # Hrb MostViewed Magento 2 Extension
 
 ## Overview

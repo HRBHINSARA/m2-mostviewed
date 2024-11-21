@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!--
+/**
+* Harsh Bhinsara.
+*
+* NOTICE OF LICENSE
+*
+* This source file is subject to the MIT License
+* that is bundled with this package in the file LICENSE.md.
+*
+* @package   Hrb_MostViewed
+* @author    Harsh Bhinsara
+*/
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="catalog" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="1"
+            showInStore="1">
+            <group id="most_viewed" translate="label" type="text" sortOrder="800" showInDefault="1" showInWebsite="1"
+                showInStore="1">
+                <label>Most Viewed Product List</label>
+               <field id="enabled" translate="label" type="select" sortOrder="10" showInDefault="1"
+                       showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Enable Notifications</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>Enable to show most viewed product in Product details page.</comment>
+                </field>
+                <field id="number_of_list" translate="label comment" type="text" sortOrder="20" showInDefault="1"
+                    showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Number of product show on list</label>
+                    <validate>validate-digits</validate>
+                    <comment>Add number how much product show in most viewed list.</comment>
+                </field>
+                <field id="list_title" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1"
+                    showInStore="1" canRestore="1">
+                    <label>Product List Title</label>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

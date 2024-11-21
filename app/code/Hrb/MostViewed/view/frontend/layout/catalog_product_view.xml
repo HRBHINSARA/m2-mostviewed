@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<!--
+/**
+* Harsh Bhinsara.
+*
+* NOTICE OF LICENSE
+*
+* This source file is subject to the MIT License
+* that is bundled with this package in the file LICENSE.md.
+*
+* @package   Hrb_MostViewed
+* @author    Harsh Bhinsara
+*/
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="content.aside">
+            <block class="Hrb\MostViewed\Block\MostViewed" name="most.viewed.products"
+                template="Hrb_MostViewed::mostviewedproducts.phtml">
+                <block class="Magento\Catalog\Block\Product\View" name="product.info.addto" as="addto"
+                    template="Magento_Catalog::product/view/addto.phtml">
+                    <block class="Magento\Catalog\Block\Product\View\AddTo\Compare" name="view.addto.compare"
+                        after="view.addto.wishlist" template="Magento_Catalog::product/view/addto/compare.phtml">
+                        <arguments>
+                            <argument name="addToCompareViewModel" xsi:type="object">
+                                Magento\Catalog\ViewModel\Product\Checker\AddToCompareAvailability
+                            </argument>
+                        </arguments>
+                    </block>
+                </block>
+                <arguments>
+                    <argument name="type" xsi:type="string">most_viewed</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+    </body>
+</page>

@@ -1,0 +1,41 @@
+<?php
+$mostViewedProducts = $block->getMostViewedProducts();
+$listTitle = $block->getMostViewListTitle();
+
+if (count($mostViewedProducts)): ?>
+<div class="block most-viewed">
+  <div class="block-title title">
+    <strong id="block-most-viewed-heading" role="heading" aria-level="2">
+      <?= /** @noEscape */ $listTitle ?></strong>
+  </div>
+  <div class="products wrapper grid products-grid products-most-viewed">
+    <ol class="products list items product-items">
+      <?php foreach ($mostViewedProducts as $_product): ?>
+            <?php $product = $block->getProduct($_product); ?>
+      <li class="item product product-item" id="product-item_<?= /* @noEscape */ $_product->getId() ?>">
+        <div class="product-item-info">
+          <a href="<?= /* @noEscape */ $product->getProductUrl() ?>" class="product photo product-item-photo">
+            <?= /* @noEscape */ $block->getImage($product)->toHtml() ?>
+          </a>
+          <div class="product details product-item-details">
+            <strong class="product name product-item-name">
+              <a class="product-item-link" title="<?= /* @noEscape */ $product->getName() ?>"
+                href="<?= /* @noEscape */ $product->getProductUrl() ?>">
+                <?= /* @noEscape */ $product->getName() ?></a>
+            </strong>
+            <?= /* @noEscape */ $block->getPrice($product); ?>
+            <div class="product actions product-item-actions">
+              <div class="secondary-addto-links actions-secondary" data-role="add-to-links">
+                <?php if ($addToBlock = $block->getChildBlock('addto')):?>
+                    <?= /* @noEscape */ $addToBlock->setProduct($_product)->getChildHtml() ?>
+                <?php endif; ?>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <?php endforeach; ?>
+    </ol>
+  </div>
+</div>
+<?php endif; ?>

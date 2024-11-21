@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!--
+/**
+* Harsh Bhinsara.
+*
+* NOTICE OF LICENSE
+*
+* This source file is subject to the MIT License
+* that is bundled with this package in the file LICENSE.md.
+*
+* @package   Hrb_MostViewed
+* @author    Harsh Bhinsara
+*/
+-->
+<view xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="urn:magento:framework:Config/etc/view.xsd">
+    <media>
+        <images module="Magento_Catalog">
+            <image id="most_viewed_products_list" type="small_image">
+                <width>152</width>
+                <height>190</height>
+            </image>
+        </images>
+    </media>
+</view>
